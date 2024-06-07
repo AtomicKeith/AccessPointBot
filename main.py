@@ -1,4 +1,14 @@
-import music
+from prod import prodbot
+from dev import devbot
 
 if __name__ == "__main__":
-    music.run_bot()
+    whichBot = ""
+    while whichBot == "":
+        whichBot = input("Which bot would you like to run? ('Prod' or 'Dev'): ")
+        if whichBot != "Prod" and whichBot != "Dev":
+            print("Invalid Response! Please use 'Prod' or 'Dev'")
+            whichBot = ""
+    if whichBot == "Prod":
+        prodbot.run_bot()
+    else:
+        devbot.run_bot()
