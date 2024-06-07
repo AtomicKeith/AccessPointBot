@@ -16,6 +16,7 @@ def run_bot():
     queues = {}
     voice_clients = {}
     youtube_base_url = 'https://www.youtube.com/'
+    youtube_base_url_2 = 'https://youtu.be/'
     youtube_results_url = youtube_base_url + 'results?'
     youtube_watch_url = youtube_base_url + 'watch?v='
     yt_dl_options = {"format": "bestaudio/best"}
@@ -42,7 +43,7 @@ def run_bot():
 
         try:
 
-            if youtube_base_url not in link:
+            if youtube_base_url not in link and youtube_base_url_2 not in link:
                 query_string = urllib.parse.urlencode({
                     'search_query': link
                 })
