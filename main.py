@@ -1,5 +1,5 @@
-from prod import prodbot
-from dev import devbot
+from prod import main as prodbot
+from dev import main as devbot
 
 if __name__ == "__main__":
     whichBot = ""
@@ -11,4 +11,4 @@ if __name__ == "__main__":
     if whichBot == "Prod":
         prodbot.run_bot()
     else:
-        devbot.run_bot()
+        devbot.run()
